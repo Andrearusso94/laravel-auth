@@ -92,10 +92,10 @@
                     <div class="col-lg-6 col-md-8 mx-auto">
 
                         <h1 class="fw-light">Album example</h1>
-                        @yield('content')
-                        <a href="{{route('admin.project.index')}}" class="btn btn-primary my-2">Project</a>
 
-                        </p>
+                        <a href="{{route('admin.project.index')}}" class="btn btn-primary my-2">Project</a>
+                        @yield('content')
+
                     </div>
                 </div>
             </section>
