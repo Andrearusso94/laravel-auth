@@ -80,7 +80,13 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        $data = [
+            $project->title = $request['title'],
+            $project->slug = $request['slug'],
+            $project->body = $request['body'],
+        ];
+        $project->update($data);
+        return to_route('admin.project.index');
     }
 
     /**

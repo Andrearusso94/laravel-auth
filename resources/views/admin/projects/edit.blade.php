@@ -11,8 +11,9 @@
     </ul>
 </div>
 @endif-->
-<form action="{{route('admin.project.store')}}" method="post">
+<form action="{{route('admin.project.update', $project->slug)}}" method="post">
     @csrf
+    @method('PUT')
     <div class="mb-3">
         <label for="title" class="form-label">Titolo</label>
         <input type="text" value="{{old('title', $project->title)}}" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="" aria-describedby="helpId">
@@ -34,6 +35,6 @@
         <small id="helpId" class="text-muted">Help text</small>
     </div>
 
-    <button type="submit" class="btn btn-primary">Crea</button>
+    <button type="submit" class="btn btn-primary">Modifica</button>
 </form>
 @endsection
