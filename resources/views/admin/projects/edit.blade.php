@@ -15,7 +15,7 @@
     @csrf
     <div class="mb-3">
         <label for="title" class="form-label">Titolo</label>
-        <input type="text" value="{{old('title')}}" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="" aria-describedby="helpId">
+        <input type="text" value="{{old('title', $project->title)}}" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="" aria-describedby="helpId">
         <small id="helpId" class="text-muted">Help text</small>
     </div>
     @error('title')
@@ -25,12 +25,12 @@
     @enderror
     <div class="mb-3">
         <label for="slug" class="form-label">Slug</label>
-        <input type="text" value="{{old('slug')}}" name="slug" id="slug" class="form-control" placeholder="" aria-describedby="helpId">
+        <input type="text" value="{{old('slug', $project->slug)}}" name="slug" id="slug" class="form-control" placeholder="" aria-describedby="helpId">
         <small id="helpId" class="text-muted">Help text</small>
     </div>
     <div class="mb-3">
         <label for="body" class="form-label">Descrizione</label>
-        <input type="text" value="{{old('body')}}" name="body" id="body" class="form-control" placeholder="" aria-describedby="helpId">
+        <input type="text" value="{{old('body', $project->body)}}" name="body" id="body" class="form-control" placeholder="" aria-describedby="helpId">
         <small id="helpId" class="text-muted">Help text</small>
     </div>
 

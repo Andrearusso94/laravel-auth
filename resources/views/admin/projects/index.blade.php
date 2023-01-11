@@ -23,7 +23,7 @@
                 <td>
                     <div class="d-flex px-1">
                         <a name="" id="" class="btn mx-1 btn-primary" href="#" role="button">Cancella</a>
-                        <a name="" id="" class="btn mx-1 btn-primary" href="#" role="button">Modifica</a>
+                        <a name="" id="" class="btn mx-1 btn-primary" href="{{route('admin.project.edit', $proje->slug)}}" role="button">Modifica</a>
                         <a name="" id="" class="btn mx-1 btn-primary" href="{{route('admin.project.show', $proje->slug)}}" role="button">Visualizza</a>
                     </div>
                 </td>
