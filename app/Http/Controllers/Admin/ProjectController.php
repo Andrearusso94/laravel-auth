@@ -46,7 +46,7 @@ class ProjectController extends Controller
         $project->body = $request['body'];
         $project->save();
 
-        return to_route('admin.project.index');
+        return to_route('admin.project.index')->with('message', 'Post ceated Successfully');
     }
 
     /**
@@ -86,7 +86,7 @@ class ProjectController extends Controller
             $project->body = $request['body'],
         ];
         $project->update($data);
-        return to_route('admin.project.index');
+        return to_route('admin.project.index')->with('message', 'Post update Successfully');
     }
 
     /**
@@ -98,6 +98,6 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         $project->delete();
-        return to_route('admin.project.index');
+        return to_route('admin.project.index')->with('message', 'Post Deleted Successfully');
     }
 }
