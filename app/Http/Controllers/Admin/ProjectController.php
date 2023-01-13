@@ -40,6 +40,7 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
+        //dd($request->all());
         $project = new Project();
         $project->title = $request['title'];
         $project->slug = $request['slug'];
